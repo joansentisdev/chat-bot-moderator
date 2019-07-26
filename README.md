@@ -1,4 +1,4 @@
-# ai-pwa
+# chat-bot-moderator
 
 ## Project setup
 ```

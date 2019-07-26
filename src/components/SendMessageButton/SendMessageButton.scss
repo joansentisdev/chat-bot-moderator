@@ -1,0 +1,24 @@
+.send-message-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  background: linear-gradient(333deg, #21D4FD 0%, #B721FF 100%);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translatex(10px);
+  transition: .3s all;
+
+  &--visible {
+    opacity: 1;
+    transform: translatex(0);
+  }
+
+  &__icon {
+    height: 20px;
+    fill: #ffffff;
+  }
+}

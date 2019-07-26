@@ -1,6 +1,6 @@
 {
-  "name": "ai-pwa",
-  "short_name": "ai-pwa",
+  "name": "chat-bot-moderator",
+  "short_name": "chat-bot-moderator",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",

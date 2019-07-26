@@ -1,0 +1,42 @@
+.messages {
+  overflow-y: scroll;
+  background-color: #fff;
+  flex: 1;
+  height: 100%;
+  margin-bottom: 16px;
+  overflow-x: hidden;
+  font-size: .8125rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border: 0;
+    border-radius: 40px;
+    min-height: 0;
+    padding: initial;
+    box-shadow: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: none;
+    border-width: 0;
+    background-color: transparent;
+    border: 0;
+  }
+
+  &--top {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .messages {
+    border-radius: 24px 24px 0 0;
+  }
+}

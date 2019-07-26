@@ -1,5 +1,5 @@
 {
-  "name": "ai-pwa",
+  "name": "chat-bot-moderator",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,9 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@tensorflow-models/universal-sentence-encoder": "^1.1.1",
+    "@tensorflow/tfjs-converter": "^1.2.3",
+    "@tensorflow/tfjs-core": "^1.2.3",
     "core-js": "^2.6.5",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
@@ -29,6 +32,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
+    "vue-svg-loader": "^0.12.0",
     "vue-template-compiler": "^2.6.10"
   }
 }
