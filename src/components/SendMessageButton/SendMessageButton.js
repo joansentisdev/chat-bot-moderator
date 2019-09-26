@@ -1,18 +1,15 @@
-import ToxicityClassifier from '@/utils/toxicityClassifier';
-
 import SendIcon from '@/assets/icons/send.svg';
 
 export default {
   props: {
+    isSending: {
+      type: Boolean,
+      default: false,
+    },
     message: {
       type: String,
       default: null,
     },
-  },
-  data() {
-    return {
-      toxicityClassifier: new ToxicityClassifier(),
-    };
   },
   components: {
     SendIcon,
@@ -26,16 +23,8 @@ export default {
     },
   },
   methods: {
-    async classifyMessage() {
-      const predictions = await this.toxicityClassifier.classify(this.message);
-      const canSendMessage = predictions.every(({ results }) => results.every(({ match }) => !match));
-      console.log(canSendMessage);
+    async onClick() {
+      this.$emit('sentMessage', this.message);
     },
-    async handleSubmit() {
-      await this.classifyMessage();
-    },
-  },
-  async mounted() {
-    await this.toxicityClassifier.load();
   },
 };

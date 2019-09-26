@@ -6,11 +6,15 @@
           placeholder="Send a message"
           class="message-form--textarea__input"
           @input="textareaResize"
+          @keydown="onKeydown"
           ref="textarea"
           rows="1"
           v-model="message" />
       </div>
-      <send-message-button :message="message"/>
+      <send-message-button
+        :is-sending="isSending"
+        :message="message"
+        @sentMessage="onSentMessage" />
     </div>
   </div>
 </template>

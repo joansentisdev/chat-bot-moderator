@@ -1,10 +1,7 @@
 <template>
-  <div :class="messageItemClasses">
-    <div
-      v-if="!isMe"
-      class="message-item--avatar" />
+  <div class="message-item">
     <div class="message-item--content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      {{ message }}
     </div>
   </div>
 </template>

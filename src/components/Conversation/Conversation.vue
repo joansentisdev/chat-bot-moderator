@@ -1,7 +1,7 @@
 <template>
   <div class="conversation">
-    <messages />
-    <message-form />
+    <messages :messages="messages" />
+    <message-form @sentMessage="onSentMessage" />
   </div>
 </template>
 <style lang="scss" src="./Conversation.scss" scoped></style>

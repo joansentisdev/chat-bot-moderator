@@ -6,4 +6,14 @@ export default {
     MessageForm,
     Messages,
   },
+  data() {
+    return {
+      messages: [],
+    };
+  },
+  methods: {
+    onSentMessage(message) {
+      this.messages.push(message);
+    },
+  },
 };
